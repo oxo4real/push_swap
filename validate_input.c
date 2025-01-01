@@ -6,7 +6,7 @@
 /*   By: aaghzal <aaghzal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/24 14:22:20 by aaghzal           #+#    #+#             */
-/*   Updated: 2024/12/29 17:39:25 by aaghzal          ###   ########.fr       */
+/*   Updated: 2025/01/01 18:36:24 by aaghzal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ static int	int_check_arg(char *s);
 int	validate_input(int ac, char **av)
 {
 	int		i;
-	int		j;
 
 	i = 1;
 	while (i < ac)
@@ -36,6 +35,7 @@ static int	validate_arg(char *s)
 	int		i;
 	int		digit_count;
 
+	digit_count = 0;
 	i = 0;
 	if (!s[i])
 		return (0);

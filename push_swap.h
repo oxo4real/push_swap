@@ -6,7 +6,7 @@
 /*   By: aaghzal <aaghzal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/24 13:13:40 by aaghzal           #+#    #+#             */
-/*   Updated: 2024/12/30 13:54:54 by aaghzal          ###   ########.fr       */
+/*   Updated: 2025/01/01 17:51:18 by aaghzal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,22 +30,15 @@ typedef struct s_list
 	struct s_list	*prev;
 }				t_list;
 
-typedef struct s_moves
-{
-	int				move;
-	struct s_moves	*next;
-}				t_moves;
-
-void set_ind(t_list *a);
-
-void	push_a(t_list **a, t_list **b, t_moves **moves);
-void	push_b(t_list **a, t_list **b, t_moves **moves);
-void	swap_a(t_list **a, t_moves **moves);
-void	swap_b(t_list **b, t_moves **moves);
-void	rotate_a(t_list **a, t_moves **moves);
-void	rotate_b(t_list **b, t_moves **moves);
-void	rrotate_a(t_list **a, t_moves **moves);
-void	rrotate_b(t_list **b, t_moves **moves);
+void	set_ind(t_list *a);
+void	push_a(t_list **a, t_list **b, int print);
+void	push_b(t_list **a, t_list **b, int print);
+void	swap_a(t_list **a, int print);
+void	swap_b(t_list **b, int print);
+void	rotate_a(t_list **a, int print);
+void	rotate_b(t_list **b, int print);
+void	rrotate_a(t_list **a, int print);
+void	rrotate_b(t_list **b, int print);
 size_t	ft_strlen(const char *s);
 int		ft_isdigit(char c);
 int		validate_input(int ac, char **av);
@@ -70,20 +63,17 @@ int		int_check(int ac, char **av);
 int		dup_check(t_list *a);
 int		issorted(t_list *list);
 int		ft_lstsize(t_list *lst);
-void	sort_a(t_list **a, t_list **b, t_moves **moves);
+void	sort_a(t_list **a, t_list **b);
 void	curr_ind(t_list	*lst);
-void	set_target_a(t_list *a, t_list *b);
-void	init_a(t_list *a, t_list *b);
 void	set_cost(t_list *lst);
-void	move_a_to_top(t_list *to_move, t_list **a, t_moves **moves);
+void	move_b_to_top(t_list *to_move, t_list **lst);
 t_list	*get_cheapest(t_list *lst);
-void	send_to_b(t_list **a, t_list **b, t_moves **moves);
-void	sort_3(t_list **a, t_moves **moves);
+void	send_to_b(t_list **a, t_list **b);
+void	sort_3(t_list **a);
 void	set_target_b(t_list *a, t_list *b);
 void	init_b(t_list *a, t_list *b);
-void	send_to_a(t_list **a, t_list **b, t_moves **moves);
-int		append_move(int move, t_moves **moves);
-void	print_moves(t_moves *moves);
-void	clear_moves(t_moves **moves);
+void	move_a_to_top(t_list *to_move, t_list **a);
+void	send_to_stack_a(t_list **a, t_list **b);
+void	set_target_b(t_list *a, t_list *b);
 
 #endif

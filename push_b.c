@@ -6,22 +6,24 @@
 /*   By: aaghzal <aaghzal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/25 17:56:15 by aaghzal           #+#    #+#             */
-/*   Updated: 2024/12/29 19:08:35 by aaghzal          ###   ########.fr       */
+/*   Updated: 2025/01/01 17:51:47 by aaghzal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push_b(t_list **a, t_list **b, t_moves **moves)
+void	push_b(t_list **a, t_list **b, int print)
 {
 	t_list	*tmp;
 
 	if (!(*a))
 		return ;
-	append_move(3, moves);
+	if (print)
+		ft_putstr_fd("pb\n", 1);
 	tmp = (*a);
 	(*a) = (*a)->next;
-	(*a)->prev = NULL;
+	if ((*a))
+		(*a)->prev = NULL;
 	tmp->next = (*b);
 	if (*b)
 		(*b)->prev = tmp;

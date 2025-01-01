@@ -6,7 +6,7 @@
 /*   By: aaghzal <aaghzal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/24 15:12:35 by aaghzal           #+#    #+#             */
-/*   Updated: 2024/12/26 13:49:39 by aaghzal          ###   ########.fr       */
+/*   Updated: 2025/01/01 18:36:38 by aaghzal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ static int	parse_args(t_list **a, char *s);
 int	parse(t_list **a, int ac, char **av)
 {
 	int		i;
-	t_list	*new;
 
 	i = 1;
 	while (i < ac)

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   send_to_a.c                                        :+:      :+:    :+:   */
+/*   send_to_stack_a.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaghzal <aaghzal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 18:23:49 by aaghzal           #+#    #+#             */
-/*   Updated: 2025/01/01 18:43:32 by aaghzal          ###   ########.fr       */
+/*   Updated: 2025/01/01 18:44:20 by aaghzal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	both_case(t_list *to_move, t_list **a, t_list **b);
 
-void	send_to_a(t_list **a, t_list **b)
+void	send_to_stack_a(t_list **a, t_list **b)
 {
 	t_list	*best;
 

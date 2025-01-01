@@ -6,20 +6,21 @@
 /*   By: aaghzal <aaghzal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/25 18:21:07 by aaghzal           #+#    #+#             */
-/*   Updated: 2024/12/29 19:08:58 by aaghzal          ###   ########.fr       */
+/*   Updated: 2025/01/01 17:52:14 by aaghzal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rotate_b(t_list **b, t_moves **moves)
+void	rotate_b(t_list **b, int print)
 {
 	t_list	*tmp;
 	t_list	*last;
 
 	if (!(*b))
 		return ;
-	append_move(5, moves);
+	if (print)
+		ft_putstr_fd("rb\n", 1);
 	last = ft_lstlast((*b));
 	tmp = (*b);
 	last->next = (*b);
