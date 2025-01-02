@@ -6,7 +6,7 @@
 /*   By: aaghzal <aaghzal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/01 15:06:39 by aaghzal           #+#    #+#             */
-/*   Updated: 2025/01/01 18:42:06 by aaghzal          ###   ########.fr       */
+/*   Updated: 2025/01/02 12:48:25 by aaghzal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ static int	move_exe(t_list **a, t_list **b, char *move)
 		return (swap_a(a, 0), 1);
 	if (ft_strcmp(move, "sb\n") == 0)
 		return (swap_b(b, 0), 1);
-	if (ft_strcmp(move, "ss") == 0)
+	if (ft_strcmp(move, "ss\n") == 0)
 		return (swap_a(a, 0), swap_b(b, 0), 1);
 	if (ft_strcmp(move, "ra\n") == 0)
 		return (rotate_a(a, 0), 1);
