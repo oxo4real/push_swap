@@ -6,7 +6,7 @@
 /*   By: aaghzal <aaghzal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 11:50:57 by aaghzal           #+#    #+#             */
-/*   Updated: 2025/01/06 16:41:24 by aaghzal          ###   ########.fr       */
+/*   Updated: 2025/01/06 17:14:44 by aaghzal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ void	sort_a(t_list **a, t_list **b)
 static void	tiny_sort(t_list **a, t_list **b, int lstlen)
 {
 	int		lstlen_cp;
-	t_list	*min;
 
 	lstlen_cp = lstlen;
 	while (lstlen_cp > 3)
