@@ -6,7 +6,7 @@
 /*   By: aaghzal <aaghzal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 11:50:57 by aaghzal           #+#    #+#             */
-/*   Updated: 2025/01/06 17:14:44 by aaghzal          ###   ########.fr       */
+/*   Updated: 2025/01/06 20:12:48 by aaghzal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 static void	min_to_top(t_list **lst, char mode);
 static void	return_to_a(t_list **a, t_list **b);
 static void	tiny_sort(t_list **a, t_list **b, int lstlen);
+static void	max_to_top(t_list **lst, char mode);
 
 void	sort_a(t_list **a, t_list **b)
 {
@@ -70,7 +71,7 @@ static void	return_to_a(t_list **a, t_list **b)
 	while (*b)
 	{
 		curr_ind((*b));
-		min_to_top(b, 'b');
+		max_to_top(b, 'b');
 		push_a(a, b, 1);
 	}
 }
@@ -86,4 +87,17 @@ static void	min_to_top(t_list **lst, char mode)
 		move_b_to_top(min, lst);
 	else if (mode == 'a')
 		move_a_to_top(min, lst);
+}
+
+static void	max_to_top(t_list **lst, char mode)
+{
+	t_list	*max;
+
+	max = (*lst);
+	while (!max->ismax)
+		max = max->next;
+	if (mode == 'b')
+		move_b_to_top(max, lst);
+	else if (mode == 'a')
+		move_a_to_top(max, lst);
 }
