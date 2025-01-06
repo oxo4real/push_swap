@@ -6,7 +6,7 @@
 /*   By: aaghzal <aaghzal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/24 13:13:40 by aaghzal           #+#    #+#             */
-/*   Updated: 2025/01/01 17:51:18 by aaghzal          ###   ########.fr       */
+/*   Updated: 2025/01/06 16:42:33 by aaghzal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ typedef struct s_list
 	int				ismin;
 	int				ismax;
 	int				abov_median;
-	int				cost;
 	struct s_list	*target;
 	struct s_list	*next;
 	struct s_list	*prev;

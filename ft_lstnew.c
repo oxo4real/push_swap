@@ -22,7 +22,6 @@ t_list	*ft_lstnew(int content)
 	new->next = NULL;
 	new->prev = NULL;
 	new->target = NULL;
-	new->cost = 0;
 	new->ismax = 0;
 	new->ismax = 0;
 	new->content = content;
