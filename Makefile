@@ -4,7 +4,7 @@ SRCS := rotate_a.c rotate_b.c rrotate_a.c rrotate_b.c swap_a.c swap_b.c push_a.c
 		ft_lstadd_back.c ft_lstclear.c ft_lstlast.c ft_lstnew.c ft_putchar_fd.c ft_putstr_fd.c \
 		free_str_arr.c ft_atoi.c ft_intcmp.c ft_isdigit.c ft_isint.c
 SRCSM := curr_ind.c ft_lstsize.c ft_strlen.c main.c move_a_to_top.c \
-		move_b_to_top.c send_to_a.c send_to_b.c send_to_stack_a.c set_cost.c set_ind.c \
+		move_b_to_top.c send_to_a.c send_to_b.c send_to_stack_a.c set_ind.c \
 		set_target_b.c sort_3.c sort_a.c 
 SRCSB := get_next_line_bonus.c get_next_line_utils_bonus.c main_bonus.c
 BUILD_DIR := build/
