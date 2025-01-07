@@ -6,7 +6,7 @@
 /*   By: aaghzal <aaghzal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/25 18:44:33 by aaghzal           #+#    #+#             */
-/*   Updated: 2025/01/01 17:52:54 by aaghzal          ###   ########.fr       */
+/*   Updated: 2025/01/07 16:47:00 by aaghzal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	rrotate_b(t_list **b, int print)
 	if ((*b)->prev)
 		((*b)->prev)->next = NULL;
 	(*b)->prev = NULL;
-	(*b)->next = tmp;
+	if (tmp != (*b))
+		(*b)->next = tmp;
 	tmp->prev = (*b);
 }
